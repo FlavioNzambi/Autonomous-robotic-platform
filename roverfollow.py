@@ -17,15 +17,13 @@ from jetson_inference import detectNet
 from pathlib import Path
 
 def main():
-    ## VARIABLES
+    ## VARIABLES & THRESHOLDS
     tmp = Path("/tmp/stream")
     target_x = 640
-    roll_offset = 150
     throttle_value = 350
-
-    # THRESHOLDS
-    lower_range = (5, 165,130)
     center = 80
+
+    lower_range = (5, 165,130)
     orange_threshold = 5
     safety_distance_threshold = 0.5
     roll_distance_threshold = 1.2
